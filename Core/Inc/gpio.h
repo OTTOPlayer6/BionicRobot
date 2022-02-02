@@ -45,5 +45,4 @@ void MX_GPIO_Init(void);
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ GPIO_H__ */
-
+#endif /*__GPIO_H__ */

@@ -9,7 +9,6 @@
 *******************************************************************************/
 
 #include "pid.h"
-#include "stm32f4xx.h"
 
 #define 	ABS(x)	((x>0)? x: -x) 
 
@@ -60,30 +59,30 @@ static float pid_calculate(PID_TypeDef *pid, float measure)
 	//如果进入死区就直接返回PID输出
 	if((ABS(pid ->err) > pid ->DeadBand))
 	{
-		//分别计算各项的值
-		pid ->pout = pid ->kp * pid ->err;
-		pid ->iout += (pid ->ki * pid ->err);
-		pid ->dout = pid ->kd * (pid ->err - pid ->last_err);
-		
-		//限制积分项输出大小
-		if(pid ->iout > pid ->IntegralLimit)
-		pid ->iout = pid ->IntegralLimit;
-		if(pid ->iout < -(pid ->IntegralLimit))
-		pid ->iout = -(pid ->IntegralLimit);
-	
-		//计算PID输出
-		pid ->output = pid ->pout + pid ->iout + pid ->dout;
-		
-		//限制PID输出大小
-		if(pid ->output > pid ->MaxOutput)         
-		{
-			pid ->output = pid ->MaxOutput;
-		}
-		if(pid ->output < -(pid ->MaxOutput))
-		{
-			pid ->output = -(pid ->MaxOutput);
-		}
-	}
+        //分别计算各项的值
+        pid->pout = pid->kp * pid->err;
+        pid->iout += (pid->ki * pid->err);
+        pid->dout = pid->kd * (pid->err - pid->last_err);
+
+        //限制积分项输出大小
+        if (pid->iout > pid->IntegralLimit) {
+            pid->iout = pid->IntegralLimit;
+        }
+        if (pid->iout < -(pid->IntegralLimit)) {
+            pid->iout = -(pid->IntegralLimit);
+        }
+
+        //计算PID输出
+        pid->output = pid->pout + pid->iout + pid->dout;
+
+        //限制PID输出大小
+        if (pid->output > pid->MaxOutput) {
+            pid->output = pid->MaxOutput;
+        }
+        if (pid->output < -(pid->MaxOutput)) {
+            pid->output = -(pid->MaxOutput);
+        }
+    }
 	return pid ->output;
 }
 

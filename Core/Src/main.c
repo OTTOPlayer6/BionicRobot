@@ -1,11 +1,13 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file        : main.c
-  * @brief       : Main program body
-  * @author      : JDC
+  * @author  				ÈáëÈºéÊâø
+  * @version				V1.0.0
+  * @date     			2022/1/21
+  * @file           main.c
+  * @brief          Main program body
   ******************************************************************************
-  * @attention
+  * @attention      
   *
   * Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.
@@ -26,7 +28,6 @@
 /* USER CODE BEGIN Includes */
 #include "bsp.h"
 #include "pid.h"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,20 +37,17 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MOTOR_NUM 6
-
+#define MOTOR_NUM 6                                                                        //Ë¶ÅPIDÊéßÂà∂ÁöÑÁîµÊú∫Êï∞
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-PID_TypeDef motor_pid[MOTOR_NUM];                                                  //µÁª˙PID ˝◊È
 
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-static float set_spd = 5000;                                                                         //µÁª˙ƒø±ÍÀŸ∂»
 
 /* USER CODE END PV */
 
@@ -61,7 +59,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+PID_TypeDef motor_pid[MOTOR_NUM];                                                //ÁîµÊú∫PIDÊï∞ÁªÑ
+static float set_spd = 5000;                                                        //ÁõÆÊ†áÈÄüÂ∫¶
 /* USER CODE END 0 */
 
 /**
@@ -94,9 +93,10 @@ int main(void) {
     MX_CAN1_Init();
     MX_CAN2_Init();
     /* USER CODE BEGIN 2 */
-    CANFilterConfig_Scale16_IdMask(&hcan1);                           //≥ı ºªØCAN1
-    CANFilterConfig_Scale16_IdMask(&hcan2);                           //≥ı ºªØCAN2
+    CANFilterConfig_Scale16_IdMask(&hcan1);                                //ÂàùÂßãÂåñCAN1
+    CANFilterConfig_Scale16_IdMask(&hcan2);                                //ÂàùÂßãÂåñCAN2
 
+    //ÂàùÂßãÂåñPIDÂèÇÊï∞
     for (int i = 0; i < MOTOR_NUM; i++) {
         pid_init(&motor_pid[i]);
         motor_pid[i].f_param_init(&motor_pid[i], PID_Speed, 16384, 5000, 10, 0, 8000, 0, 1.5f, 0.1f, 0);
@@ -106,16 +106,18 @@ int main(void) {
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
-        /* USER CODE END WHILE */
-
-        /* USER CODE BEGIN 3 */
         for (int i = 0; i < MOTOR_NUM; i++) {
             motor_pid[i].target = set_spd;
             motor_pid[i].f_cal_pid(&motor_pid[i], moto_chassis[i].rpm);
         }
-        CanTransmit(&hcan1, 0x200, motor_pid[0].output, motor_pid[1].output, motor_pid[2].output, motor_pid[3].output);
-        CanTransmit(&hcan2, 0x1ff, motor_pid[4].output, motor_pid[5].output, 0, 0);
+        CanTransmit(&hcan1, 0x200, (int16_t) motor_pid[0].output, (int16_t) motor_pid[1].output,
+                    (int16_t) motor_pid[2].output, (int16_t) motor_pid[3].output);
+        CanTransmit(&hcan2, 0x1FF, (int16_t) motor_pid[4].output, (int16_t) motor_pid[5].output,
+                    0, 0);
         HAL_Delay(10);
+        /* USER CODE END WHILE */
+
+        /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */
 }
@@ -139,8 +141,8 @@ void SystemClock_Config(void) {
     RCC_OscInitStruct.HSEState = RCC_HSE_ON;
     RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
     RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-    RCC_OscInitStruct.PLL.PLLM = 25;
-    RCC_OscInitStruct.PLL.PLLN = 336;
+    RCC_OscInitStruct.PLL.PLLM = 4;
+    RCC_OscInitStruct.PLL.PLLN = 168;
     RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
     RCC_OscInitStruct.PLL.PLLQ = 4;
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
@@ -148,7 +150,8 @@ void SystemClock_Config(void) {
     }
     /** Initializes the CPU, AHB and APB buses clocks
     */
-    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+                                  | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
     RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
     RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
     RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;

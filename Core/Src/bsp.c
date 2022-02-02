@@ -2,7 +2,7 @@
   * @file	 	  	bsp.c
   * @author  		金鼎承
   * @version		V1.0.0
-  * @date     	2022/1/21
+  * @date       	2022/1/21
   * @brief   		定义CAN滤波器，并进行PID三环控制
   ******************************************************************************
   * @attention 	none
@@ -106,21 +106,24 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 }
 
 //电机数据解析,送往进行PID调参
-void CanGetMotorMessure(moto_measure *motor, uint8_t RxData[])
-{
-	uint16_t angle = RxData[0] << 8 | RxData[1];													//转子的机械角度
-	int16_t rpm = RxData[2] << 8 | RxData[3];															//转子转速
-	float current = (RxData[4] << 8 | RxData[5])*5.f/16384.f;							//实际输出转矩电流
+void CanGetMotorMessure(moto_measure *motor, const uint8_t RxData[]) {
+    static int16_t Data[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    for (int i = 0; i <= 8; i++) {
+        Data[i] = RxData[i];
+    }
+    uint16_t angle = Data[0] << 8 | Data[1];                                                    //转子的机械角度
+    int16_t rpm = (int16_t)(Data[2] << 8 | Data[3]);                                                        //转子转速
+    float current = (float) (Data[4] << 8 | Data[5]) * 5.f / 16384.f;                                //实际输出转矩电流
 
-	//将得到的数据填入
-	motor ->last_angle = motor ->angle;
-	motor ->angle = angle;
-	motor ->rpm = rpm;
-	motor ->real_current = current;
-	
-	if(motor ->angle - motor ->last_angle > 4096)
-		motor ->round_cnt--;
-	else if(motor ->angle - motor ->last_angle < -4096)
+    //将得到的数据填入
+    motor->last_angle = motor->angle;
+    motor->angle = angle;
+    motor->rpm = rpm;
+    motor->real_current = current;
+
+    if (motor->angle - motor->last_angle > 4096)
+        motor->round_cnt--;
+    else if (motor->angle - motor->last_angle < -4096)
 		motor ->round_cnt++;
 	
 	motor ->total_angle = motor ->round_cnt * 8192 + motor ->angle - motor ->offset_angle;
@@ -144,23 +147,20 @@ void CanMotoOffset(moto_measure *motor, CAN_HandleTypeDef *hcan)
 	motor ->angle = (uint16_t)(RxData[0] << 8 | RxData[1]);								//获取电机的初始机械角度
 	motor ->offset_angle = motor ->angle;																	//将初始机械角度赋值
 }
-	
-#define 	ABS(x)	((x>0)? x: -x) 
+
+#define    ABS(x)    (((x)>0)? (x): -(x))
 
 //得到电机总共转过的角度
-void CanGetTotalAngle(moto_measure *motor)
-{
-	static uint32_t res1, res2, delta;																		//定义三个中间变量
-	if(motor ->angle < motor ->last_angle)																//如果这次的角度比上一次小
-	{																																			
-		res1 = motor ->angle + 8192 - motor ->last_angle;										//正转
-		res2 = motor ->angle - motor ->last_angle;													//反转
-	}
-	else
-	{
-		res1 = motor ->angle - 8192 - motor ->last_angle;										//反转
-		res2 = motor ->angle - motor ->last_angle;													//正转
-	}
+void CanGetTotalAngle(moto_measure *motor) {
+    static int32_t res1, res2, delta;                                                                        //定义三个中间变量
+    if (motor->angle < motor->last_angle)                                                                //如果这次的角度比上一次小
+    {
+        res1 = motor->angle + 8192 - motor->last_angle;                                        //正转
+        res2 = motor->angle - motor->last_angle;                                                    //反转
+    } else {
+        res1 = motor->angle - 8192 - motor->last_angle;                                        //反转
+        res2 = motor->angle - motor->last_angle;                                                    //正转
+    }
 	
 	if(ABS(res1)<ABS(res2))																								//不管正反转，肯定是转的角度小的那个是真的	
 		delta = res1;
