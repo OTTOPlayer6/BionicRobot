@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @author  				金鼎承
-  * @version				V1.0.0
-  * @date     			2022/1/21
+  * @author  		金鼎承
+  * @version		V1.0.0
+  * @date     		2022/1/21
   * @file           main.c
   * @brief          Main program body
   ******************************************************************************
@@ -21,12 +21,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "can.h"
+#include "bsp_pid.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "bsp.h"
+#include "bsp_can.h"
 #include "pid.h"
 /* USER CODE END Includes */
 
@@ -37,7 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MOTOR_NUM 6                                                                        //要PID控制的电机数
+#define MOTOR_NUM 6                                                           //要PID控制的电机数
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -59,8 +59,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-PID_TypeDef motor_pid[MOTOR_NUM];                                                //电机PID数组
-static float set_spd = 5000;                                                        //目标速度
+PID_TypeDef motor_pid[MOTOR_NUM];                                             //电机PID数组
+static float set_spd = 5000;                                                  //目标速度
 /* USER CODE END 0 */
 
 /**
@@ -110,10 +110,11 @@ int main(void) {
             motor_pid[i].target = set_spd;
             motor_pid[i].f_cal_pid(&motor_pid[i], moto_chassis[i].rpm);
         }
-        CanTransmit(&hcan1, 0x200, (int16_t) motor_pid[0].output, (int16_t) motor_pid[1].output,
-                    (int16_t) motor_pid[2].output, (int16_t) motor_pid[3].output);
-        CanTransmit(&hcan2, 0x1FF, (int16_t) motor_pid[4].output, (int16_t) motor_pid[5].output,
-                    0, 0);
+        CanTransmit(&hcan1, 0x200, (int16_t) motor_pid[0].output,
+                    (int16_t) motor_pid[1].output, (int16_t) motor_pid[2].output,
+                    (int16_t) motor_pid[3].output);
+        CanTransmit(&hcan2, 0x1FF, (int16_t) motor_pid[4].output,
+                    (int16_t) motor_pid[5].output, 0, 0);
         HAL_Delay(10);
         /* USER CODE END WHILE */
 

@@ -1,8 +1,8 @@
 /*******************************************************************************
-  * @file	 	  	bsp.h
+  * @file	 	  	bsp_can.h
   * @author  		金鼎承
   * @version		V1.0.0
-  * @date     	2022/1/21
+  * @date     	    2022/1/21
   * @brief   		define BSP strut
   ******************************************************************************
   * @attention 	none
@@ -11,7 +11,7 @@
 #ifndef __BSP_CAN
 #define __BSP_CAN
 
-#include "can.h"
+#include "bsp_pid.h"
 
 //CAN接受的电调ID
 typedef enum {
@@ -26,14 +26,14 @@ typedef enum {
 
 //CAN接受到的电调的数据与电机PID参数结构体
 typedef struct {
-    uint16_t offset_angle;    //转子的初始机械角度
+    uint16_t offset_angle;                              //转子的初始机械角度
 
-    uint16_t angle;                    //转子机械角度绝对值:[0,8191]对应[0:360]
-    uint16_t last_angle;                //上次转子的机械角度绝对值
-    int16_t rpm;                           //转子转速，单位:rpm
-    float real_current;                //转子实际输出转矩电流
-    int32_t round_cnt;          //电机旋转圈数
-    int32_t total_angle;            //电机旋转的总角度
+    uint16_t angle;                                     //转子机械角度绝对值:[0,8191]对应[0:360]
+    uint16_t last_angle;                                //上次转子的机械角度绝对值
+    int16_t rpm;                                        //转子转速，单位:rpm
+    float real_current;                                 //转子实际输出转矩电流
+    int32_t round_cnt;                                  //电机旋转圈数
+    int32_t total_angle;                                //电机旋转的总角度
 
 } moto_measure;
 
