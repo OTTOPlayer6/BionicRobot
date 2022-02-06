@@ -22,6 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
+#include "rng.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -92,6 +93,7 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
+  MX_RNG_Init();
   /* USER CODE BEGIN 2 */
     CANFilterCfg_Scale16_IdMask_ReceiveALL(&hcan1);                                //初始化CAN1
     CANFilterCfg_Scale16_IdMask_ReceiveALL(&hcan2);                                //初始化CAN2

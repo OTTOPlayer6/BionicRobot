@@ -10,26 +10,25 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G &quot;MinGW Makefiles&quot;" BUILD_OPTIONS="-- -j 8" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G &quot;Unix Makefiles&quot;" BUILD_OPTIONS="-- -j 8" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c663e9f5-0abd-4a4a-985f-fde95a7c2443" name="变更" comment="更改了一些错误。。QAQ&#10;PID算法还是不太完善&#10;下次再看看吧。。">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="c663e9f5-0abd-4a4a-985f-fde95a7c2443" name="变更" comment="准备调参了">
+      <change afterPath="$PROJECT_DIR$/Core/Inc/rng.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/rng.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BionicRobot.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/BionicRobot.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/bsp_can.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/bsp_can.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/bsp_pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/can.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/pid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/bsp_can.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/bsp_can.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/bsp_pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/can.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/can.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/can.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/can.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/can.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/pid.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stm32f4discovery.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/stm32f4discovery.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +49,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Core/Inc/main.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Inc/pid.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Src/main.c" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,18 +93,18 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD BionicRobot">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BionicRobot.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BionicRobot" TARGET_NAME="BionicRobot.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BionicRobot" RUN_TARGET_NAME="BionicRobot.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OCD BionicRobot" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BionicRobot" TARGET_NAME="BionicRobot.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="BionicRobot" RUN_TARGET_NAME="BionicRobot.elf">
-      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\Users\27815\OneDrive\CLionProjects\BionicRobot\stm32f4discovery.cfg" reset-type="INIT" download-type="ALWAYS">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="$PROJECT_DIR$/stm32f4discovery.cfg" reset-type="INIT" download-type="ALWAYS">
         <debugger kind="GDB" isBundled="true" />
       </openocd>
       <method v="2">
@@ -128,6 +132,8 @@
       <workItem from="1644124669117" duration="9144000" />
       <workItem from="1644145269780" duration="245000" />
       <workItem from="1644145536636" duration="4452000" />
+      <workItem from="1644158067138" duration="269000" />
+      <workItem from="1644158465481" duration="661000" />
     </task>
     <servers />
   </component>
