@@ -1,0 +1,75 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CMakeRunConfigurationManager\" shouldGenerate=\"true\" shouldDeleteObsolete=\"true\">\r\n    <generated>\r\n      <config projectName=\"BionicRobot\" targetName=\"BionicRobot.elf\" />\r\n    </generated>\r\n  </component>\r\n  <component name=\"CMakeSettings\">\r\n    <configurations>\r\n      <configuration PROFILE_NAME=\"Debug\" ENABLED=\"true\" CONFIG_NAME=\"Debug\" />\r\n    </configurations>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c663e9f5-0abd-4a4a-985f-fde95a7c2443\" name=\"变更\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Inc/bsp.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Inc/bsp.h\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Inc/gpio.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Inc/gpio.h\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Inc/pid.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Inc/pid.h\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/bsp.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/bsp.c\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/can.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/can.c\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/gpio.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/gpio.c\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/main.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/main.c\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Core/Src/pid.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Core/Src/pid.c\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"CMakeBuildProfile:Debug\" />\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectApplicationVersion\">\r\n    <option name=\"ide\" value=\"CLion\" />\r\n    <option name=\"majorVersion\" value=\"2021\" />\r\n    <option name=\"minorVersion\" value=\"3.2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"24GcqG7YHdYjfxZK8d32Nho4NED\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.cidr.known.project.marker\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"cf.first.check.clang-format\" value=\"false\" />\r\n    <property name=\"cidr.known.project.marker\" value=\"true\" />\r\n    <property name=\"cmake.loaded.for.project\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/Core/Src\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\27815\\OneDrive\\CLionProjects\\BionicRobot\\Core\\Src\" />\r\n      <recent name=\"C:\\Users\\27815\\OneDrive\\CLionProjects\\BionicRobot\\Core\\Inc\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"OpenOCD 下载并运行.OCD BionicRobot\">\r\n    <configuration default=\"true\" type=\"CLionExternalRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\">\r\n      <method v=\"2\">\r\n        <option name=\"CLION.EXTERNAL.BUILD\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"BionicRobot.elf\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"BionicRobot\" TARGET_NAME=\"BionicRobot.elf\" CONFIG_NAME=\"Debug\" RUN_TARGET_PROJECT_NAME=\"BionicRobot\" RUN_TARGET_NAME=\"BionicRobot.elf\">\r\n      <method v=\"2\">\r\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"OCD BionicRobot\" type=\"com.jetbrains.cidr.embedded.openocd.conf.type\" factoryName=\"com.jetbrains.cidr.embedded.openocd.conf.factory\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"BionicRobot\" TARGET_NAME=\"BionicRobot.elf\" CONFIG_NAME=\"Debug\" version=\"1\" RUN_TARGET_PROJECT_NAME=\"BionicRobot\" RUN_TARGET_NAME=\"BionicRobot.elf\">\r\n      <openocd version=\"1\" gdb-port=\"3333\" telnet-port=\"4444\" board-config=\"C:\\Users\\27815\\OneDrive\\CLionProjects\\BionicRobot\\stm32f4discovery.cfg\" reset-type=\"INIT\" download-type=\"ALWAYS\">\r\n        <debugger kind=\"GDB\" isBundled=\"true\" />\r\n      </openocd>\r\n      <method v=\"2\">\r\n        <option name=\"CLION.COMPOUND.BUILD\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"CMake 应用程序.BionicRobot.elf\" />\r\n      <item itemvalue=\"OpenOCD 下载并运行.OCD BionicRobot\" />\r\n    </list>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"应用程序级\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"默认任务\">\r\n      <changelist id=\"c663e9f5-0abd-4a4a-985f-fde95a7c2443\" name=\"变更\" comment=\"\" />\r\n      <created>1643260556734</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1643260556734</updated>\r\n      <workItem from=\"1643260580095\" duration=\"2708000\" />\r\n      <workItem from=\"1643263332988\" duration=\"6193000\" />\r\n      <workItem from=\"1643773410017\" duration=\"152000\" />\r\n      <workItem from=\"1643773579499\" duration=\"4200000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\"*.cfg\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -11,18 +11,9 @@
+     </configurations>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c663e9f5-0abd-4a4a-985f-fde95a7c2443" name="变更" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="c663e9f5-0abd-4a4a-985f-fde95a7c2443" name="变更" comment="更改了一些错误。。QAQ&#10;PID算法还是不太完善&#10;下次再看看吧。。">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Core/Inc/bsp.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/bsp.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Inc/gpio.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/gpio.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Inc/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/pid.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/bsp.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/bsp.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/can.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/can.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Core/Src/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/pid.c" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -79,12 +70,12 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="OpenOCD 下载并运行.OCD BionicRobot">
+-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
++    <configuration name="BionicRobot.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BionicRobot" TARGET_NAME="BionicRobot.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BionicRobot" RUN_TARGET_NAME="BionicRobot.elf">
+       <method v="2">
+-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
++        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="BionicRobot.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BionicRobot" TARGET_NAME="BionicRobot.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BionicRobot" RUN_TARGET_NAME="BionicRobot.elf">
++    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+       <method v="2">
+         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+       </method>
+@@ -113,8 +104,17 @@
+       <workItem from="1643260580095" duration="2708000" />
+       <workItem from="1643263332988" duration="6193000" />
+       <workItem from="1643773410017" duration="152000" />
+-      <workItem from="1643773579499" duration="4200000" />
++      <workItem from="1643773579499" duration="4747000" />
++      <workItem from="1644123515957" duration="48000" />
+     </task>
++    <task id="LOCAL-00001" summary="更改了一些错误。。QAQ&#10;PID算法还是不太完善&#10;下次再看看吧。。">
++      <created>1643780113195</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1643780113195</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -134,4 +134,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="更改了一些错误。。QAQ&#10;PID算法还是不太完善&#10;下次再看看吧。。" />
++    <option name="LAST_COMMIT_MESSAGE" value="更改了一些错误。。QAQ&#10;PID算法还是不太完善&#10;下次再看看吧。。" />
++  </component>
+ </project>
+\ No newline at end of file
